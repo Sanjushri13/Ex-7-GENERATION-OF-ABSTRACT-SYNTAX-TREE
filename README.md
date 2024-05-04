@@ -19,7 +19,7 @@ To write a program to convert the BNF rules into YACC form and to generate Abstr
 8.	Compile these with the C compiler as gcc lex.yy.c y.tab.c
 9.	A C program is given as input and the abstract syntax tree is generated as output.
 # PROGRAM
-Program:int.l file
+Program: int.l file
 ```
 %{
 #include "y.tab.h"
@@ -55,7 +55,7 @@ int|char|float { return TYPE; }
 
 %%
 ```
-Program:int.y file
+Program: int.y file
 ```
 %{
 #include <string.h>
@@ -207,7 +207,7 @@ void yyerror() {
     printf("\n Error on line no:%d",LineNo);
 }
 ```
-Program:test.c file
+Program: test.c file
 ```
 main() {
     int a, b, c;
